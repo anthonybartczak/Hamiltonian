@@ -1,5 +1,6 @@
 from examples import Examples
 from numpy import zeros
+from os import system
 
 
 class Graph():
@@ -101,13 +102,18 @@ elif choice == "nie":
         for vertices in range(ver_num):
             loop = True
             while loop is True:
-                adjacent = input("Podaj wierzchołki graniczące z wierzchołkiem " + str(vertices) + "\nWpisz koniec jeśli skończyłeś wpisywać: ")
-                #if adjacent == "koniec":
-                    #print("Kończę wypełnianie macierzy.")
-                    #loop = False
-                #else:
-                #for ver in range(ver_num):
-                #if adjacent == ver:
+                adjacent = input(
+                    "Podaj wierzchołki graniczące z wierzchołkiem "
+                    + str(vertices)
+                    + "\nKolejne wierzchołki podawaj rosnąco, po spacji "
+                    + "\nWpisz koniec jeśli skończyłeś wpisywać: ")
+
+                if adjacent == "koniec":
+                    system("cls")
+                    print("Kończę dla wierzchołka " + str(vertices) + "\n")
+                    loop = False
+                else:
+
 
 
 
