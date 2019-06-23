@@ -92,17 +92,22 @@ elif choice == "nie":
     else:
         size = (ver_num, ver_num)
         temp_mtx = zeros(size, dtype=int)
+        dict_mtx = {}
+
+        for vertices in range(ver_num):
+            dict_mtx[vertices] = ''
+            print(dict_mtx)
 
         for vertices in range(ver_num):
             loop = True
             while loop is True:
                 adjacent = input("Podaj wierzchołki graniczące z wierzchołkiem " + str(vertices) + "\nWpisz koniec jeśli skończyłeś wpisywać: ")
-                if adjacent == "koniec":
-                    print("Kończę wypełnianie macierzy.")
-                    loop = False
-                else:
-                    for ver in range(ver_num):
-                        if adjacent == ver:
+                #if adjacent == "koniec":
+                    #print("Kończę wypełnianie macierzy.")
+                    #loop = False
+                #else:
+                #for ver in range(ver_num):
+                #if adjacent == ver:
 
 
 
